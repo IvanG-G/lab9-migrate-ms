@@ -30,3 +30,19 @@ The platform has been experiencing challenges with scaling during high-traffic p
 ## **Implementation Simulation:**
   * **Migration Roadmap:** Develop a detailed plan for migrating the identified monolithic components to microservices. This plan should include prioritization of services to be migrated, identification of dependencies, and a strategy for data migration.
   * **Architecture Documentation:** Document the proposed microservices architecture, illustrating the interaction between services and the migration steps. Include a brief narrative explaining the rationale behind key decisions.
+
+
+## **Plan:**
+
+The first thing to do is to create the databases and migrate the most important to clients, their personal information, we also should be creating the user management API, and modify and erase all the things where we are using user information on monolithic service, then when the micro service is running, we should point to those endpoints from the front. 
+We should repeat this in order to create all the microservices in the next order of APIs:
+  * User Management
+  * Order Processing
+  * Product Catalog
+  * Customer Support
+  * Orchestrator API: meanwhile we dont use this orchestrator we can use lambdas or serverless event driven services to orchestrate the microservices. Then change to Orch API, because is cheaper. 
+<img width="907" alt="image" src="https://github.com/IvanG-G/lab9-migrate-ms/assets/138608967/afbf5cb8-cad5-41df-bf7c-e6e0e95c1619">
+
+
+
+
